@@ -8,23 +8,22 @@ template<class T>
 class Vector
 {
   private:
-    T *pArr;
-    int capacity;
+    T *pArr;      // Create a pointer to T type dynamic array
+    int capacity; // Capacity is the real size of the dynamic array 
     int _size;
     
   public:
-
     //Constructor
     Vector(){
-      this->capacity = INIT_CAPACITY;
-      this->pArr = new T[capacity];
-      this->size = 0;
+      this->capacity = INIT_CAPACITY; // Initialize a dynamic array of size 2
+      this->pArr = new T[capacity];   // Declare a dynamic array of type T with the init capacity
+      this->size = 0;                 // Set default size to 0 since there are no element yet
     }
 
     //Constructor with size passed in by user
     Vector(int size){
-      this->capacity = size;
-      this->pArr = new T[capacity];
+      this->capacity = size;          // Initialize a dynamic array of size N from user input
+      this->pArr = new T[capacity];   // Declare a dynamic array of type T with the user size passed in
       _size = size;
     }
 
